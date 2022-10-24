@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Audiowide&family=Noto+Sans+KR:wght@300;400;700&display=swap");
+
+/*
+font-family: 'Do Hyeon', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+ */
+
+/* 공통 사항 */
+:root {
+  /* color */
+  --black: #000000;
+  --white: #ffffff;
+
+  --bg: #b5d1ce;
+  --bg2: #a4a8e3;
+  --main-bg: #272843;
+  --main: #32355a;
+  --middle: #25294d;
+  --active: #343868;
+  --notice: #5e7cfa;
+  --notice2: #6434ff;
+  --notice3: #d95163;
+  --btn-red: #b8302c;
+
+  --game: #1d9e9f;
+  --offline: #bbbbbb;
+  --play: #d22924;
+  --online: #46f057;
+  --yellow: #fbe158;
+  --gold: #ffbd12;
+
+  --modal: var(--main-bg);
+  --modal-bg: rgba(37, 41, 77, 0.4);
+
+  /* font */
+  --font-family: "Noto Sans KR", sans-serif;
+  --font-game: "Do Hyeon", sans-serif;
+  --font-game-score: "Audiowide", cursive;
+
+  --h1: 2.375rem;
+  --h2: 1.5rem;
+  --h3: 1.125rem;
+  --h4: 1rem;
+  --h5: 0.8125rem;
+  --h6: 0.75rem;
+}
+
+a {
+  color: var(--white);
+}
+
+img {
+  -webkit-user-drag: none;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  object-fit: cover;
+}
+
+.btn15 {
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn30 {
+  border-radius: 30px;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* user-select: none; */
+  /* overflow: hidden; */
+  background-color: var(--bg-blue);
+  font-family: var(--font-family);
+  color: var(--white);
+  background-color: var(--bg);
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  background-color: var(--main);
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+
+.box {
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: var(--white);
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+input {
+  color: var(--white);
+  text-align: center;
+  border: none;
+  font-size: 1em;
+  outline: none;
+  background: none;
+}
+
+.color-yellow {
+  color: var(--yellow);
+}
+.color-red {
+  color: var(--play);
+}
+.color-green {
+  color: var(--online);
+}
+.color-grey {
+  color: var(--offline);
+}
+
+.fz12 {
+  font-size: 12px;
+}
+.fz14 {
+  font-size: 14px;
+}
+.fz18 {
+  font-size: 18px;
+}
+.fz20 {
+  font-size: 20px;
+}
+.fz22 {
+  font-size: 20px;
+}
+.fz24 {
+  font-size: 20px;
+}
+
+.text_nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

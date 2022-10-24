@@ -1,0 +1,47 @@
+version: "3.9"
+services:
+  ft_postgres:
+    container_name: postgres
+    image: postgres:latest
+    ports:
+      - "6432:5432"
+    volumes:
+      - psql:/var/lib/postgresql/data
+    networks:
+      - nestjs-psql
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=test
+
+  ft_backend:
+    container_name: backend
+    image: backend:42
+    build:
+      context: backend
+    ports:
+      - "5000:5000"
+    networks:
+      - vue-nestjs
+      - nestjs-psql
+    depends_on:
+      - ft_postgres
+
+  ft_frontend:
+    container_name: frontend
+    image: frontend:42
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - vue-nestjs
+    depends_on:
+      - ft_backend
+
+networks:
+  vue-nestjs:
+  nestjs-psql:
+
+volumes:
+  psql:
+    name: psql
