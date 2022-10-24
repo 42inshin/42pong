@@ -31,12 +31,11 @@ const socketOptions = {
     },
   },
 };
-// const socket = io("http://localhost:5000/chat", socketOptions);
 
 export const ChatStore = defineStore({
   id: "chatStore",
   state: () => ({
-    socket: io("http://localhost:5000/chat", socketOptions),
+    socket: io("http://localhost:5001/chat", socketOptions),
     channels: Array<Channel>(),
     ownerChannels: Array<number>(),
     isScroll: false,

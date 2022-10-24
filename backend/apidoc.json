@@ -3,5 +3,5 @@
     "version": "1.0.0",
     "description": "my project apiDoc basic example",
     "title": "Custom apiDoc browser title",
-    "url" : "https://localhost:5000"
+    "url" : "https://localhost:5001"
   }

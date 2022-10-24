@@ -18,7 +18,7 @@ const socketOptions = {
 export const GameSocketStore = defineStore({
   id: "GameSocketStore",
   state: () => ({
-    socket: io("http://localhost:5000/game", socketOptions),
+    socket: io("http://localhost:5001/game", socketOptions),
   }),
   actions: {
     disConnected() {

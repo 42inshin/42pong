@@ -18,7 +18,7 @@ export const UserListStore = defineStore({
   id: "UserListStore",
   state: () => ({
     onAll: true,
-    socket: io("http://localhost:5000/", socketOptions),
+    socket: io("http://localhost:5001/", socketOptions),
     allList: Array<User>(),
     friendList: Array<User>(),
     blockList: Array<User>(),

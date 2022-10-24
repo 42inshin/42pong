@@ -82,7 +82,7 @@ function setGameUser(where: GameUser, what: ApiUser) {
   where.lose = what?.lose;
 }
 
-const socket: Socket = io("http://localhost:5000/game", socketOptions);
+const socket: Socket = io("http://localhost:5001/game", socketOptions);
 socket.on("connect", () => {
   gameRoomInfo.socket = socket;
   if (chatStore.data.chat) {
